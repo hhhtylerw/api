@@ -10,13 +10,15 @@ accept any argument from project [sherlock](https://github.com/sherlock-project/
 
 ```
 {
-    "args": "[sherlock arguments]"
+    "user": myusername",
+    "args": "[maigret arguments]"
 }
 ```
 
 #### Example
 
 Return the version information from current server's sherlock project.
+I don't think this one works anymore.
 
 ```
 {

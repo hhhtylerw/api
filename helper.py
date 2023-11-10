@@ -27,7 +27,7 @@ def cmd_in_dir(newdir, cmd):
 
 def valid_args(cmd):
     """Return true, if command is safe to execute."""
-    escape = [";", "&", "|", "<", ">" "\"" "\'"]
+    escape = [";", "&", "|", "<", ">", "\"", "\'", "\\"]
     for ch in escape:
         if ch in cmd:
             return False
@@ -42,7 +42,7 @@ def sherlock_dir():
 
 def sherlock_data():
     """Return `data.json` file from sherlock project."""
-    data_path = f"{sherlock_dir()}/sherlock/resources/data.json"
+    data_path = f"{sherlock_dir()}/maigret/resources/data.json"
     with open(data_path, "r", encoding="utf-8") as data_file:
         data = json.load(data_file)
     return data

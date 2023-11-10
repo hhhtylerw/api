@@ -1,11 +1,13 @@
 <img align="right" src="https://user-images.githubusercontent.com/27065646/53551960-ae4dff80-3b3a-11e9-9075-cef786c69364.png"/>
 
-# Sherlock API
+# Maigret API
 
 [![Python Ver.](https://img.shields.io/badge/python-%3E=_3.6-green.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-Api for sherlock module.
+Api for maigret module.
+
+Maigret is significantly better than Sherlock. Use and contribute to it instead.
 
 ## Prerequisites
 
@@ -41,7 +43,7 @@ $ python3 manage.py runserver 0.0.0.0:8000
 Start you browser and type [127.0.0.1:8000](http://127.0.0.1:8000/) in as
 your target URL and hit return.
 
-Now you should able to test your Sherlock API through DRF browser interface!
+Now you should able to test your Maigret API through DRF browser interface!
 
 ## License
 

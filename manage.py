@@ -12,9 +12,9 @@ def init_sherlock():
     if path.exists(sherlock_dir()):
         cmd_in_dir(sherlock_dir(), f"git pull")  # Update to the newest version
     else:  # Othersie, clone it once
-        os.system(f"git clone https://github.com/sherlock-project/sherlock {sherlock_dir()}");
+        os.system(f"git clone https://github.com/soxoj/maigret {sherlock_dir()}");
     os.system(f"{py_command()} -m pip install -r {sherlock_dir()}/requirements.txt")
-    os.system(f"{py_command()} {sherlock_dir()}/sherlock --version")
+    os.system(f"{py_command()} {sherlock_dir()}/maigret.py --version")
 
 def main():
     """Run administrative tasks."""
