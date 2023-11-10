@@ -10,7 +10,7 @@ accept any argument from project [sherlock](https://github.com/sherlock-project/
 
 ```
 {
-    "user": myusername",
+    "user": "myusername",
     "args": "[maigret arguments]"
 }
 ```
