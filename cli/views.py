@@ -21,7 +21,7 @@ class CliView(APIView):
             if valid_args(args) == False or valid_args(user) == False or not user or not args:
                 return JsonResponse({})
             else:
-                full_cmd = f"{py_command()} {sherlock_dir()}/maigret.py {user} {args}"
+                full_cmd = f"{py_command()} {sherlock_dir()}/maigret.py {user} {args} --json simple"
                 proc = Popen(full_cmd, stdin=PIPE, stdout=PIPE, stderr=PIPE, shell=True)
                 proc.communicate()
         except:
