@@ -1,4 +1,4 @@
-<img align="right" src="https://user-images.githubusercontent.com/27065646/53551960-ae4dff80-3b3a-11e9-9075-cef786c69364.png"/>
+<img align="right" src="https://raw.githubusercontent.com/soxoj/maigret/main/static/maigret.png"/>
 
 # Maigret API
 
@@ -19,7 +19,7 @@ order to do development to this project.
 
 ```sh
 # clone the repo
-$ git clone https://github.com/sherlock-project/api.git
+$ git clone https://github.com/hhhtylerw/api.git
 
 # change the working directory to api
 $ cd api
