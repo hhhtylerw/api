@@ -25,18 +25,39 @@ class CliView(APIView):
                 proc = Popen(full_cmd, stdin=PIPE, stdout=PIPE, stderr=PIPE, shell=True)
                 proc.communicate()
         except:
+            print("ERR1")
             return JsonResponse({})
 
         try:
             with open(f"reports/report_{user}_simple.json", 'r') as f:
                 report = json.load(f)
 
-            sites = {}
-            for i in report:
-                sites[i] = report[i].get("url_user", "")
+            output = {
+                "Username": user
+            }
 
-            return JsonResponse(sites)
-        except:
+            accounts = []
+            interests = set()
+            for i in report:
+                k = i
+                if k == "GitHubGist":
+                    k = "GitHub"
+                if k == "Nitter":
+                    k = "Twitter"
+
+                accounts.append({
+                    "Name": k,
+                    "URL": report[i].get("url_user", "").replace("https://nitter.net/", "https://twitter.com/").replace("https://gist.github.com/", "https://github.com/"),
+                })
+                for j in report[i].get("site", []).get("tags", []):
+                    if j != "us":
+                        interests.add(j)
+            output["Interests"] = ", ".join(interests)
+            output["Accounts"] = accounts
+
+            return JsonResponse(output)
+        except Exception as e:
+            print("ERR2", e)
             return JsonResponse({})
 
 class DataView(APIView):
