@@ -44,10 +44,15 @@ class CliView(APIView):
                     k = "GitHub"
                 if k == "Nitter":
                     k = "Twitter"
+                if k == "Pixwox":
+                    k = "Instagram"
 
                 accounts.append({
                     "Name": k,
-                    "URL": report[i].get("url_user", "").replace("https://nitter.net/", "https://twitter.com/").replace("https://gist.github.com/", "https://github.com/"),
+                    "URL": report[i].get("url_user", "").
+                        replace("https://nitter.net/", "https://twitter.com/").
+                        replace("https://gist.github.com/", "https://github.com/").
+                        replace("https://www.pixwox.com/profile/", "https://www.instagram.com/"),
                 })
                 for j in report[i].get("site", []).get("tags", []):
                     if j != "us":
