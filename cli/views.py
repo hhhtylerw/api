@@ -14,7 +14,7 @@ class CliView(APIView):
         data = json.loads(request.body)
         user = data['user']
         args = data['args']
-        # print(f"`{user}`")
+        # print(f"`{user}`") 
         # print(f"`{args}`")
 
         try:
